@@ -6,7 +6,6 @@ use Dompdf\Dompdf;
 use Dompdf\Options;
 
 $name = htmlspecialchars($_POST["name"]);
-$secondName = htmlspecialchars($_POST["secondName"]);
 $position = htmlspecialchars($_POST["position"]);
 $about = htmlspecialchars($_POST["about"]);
 $gitLink = $_POST["gitLink"];
@@ -24,7 +23,7 @@ $dompdf->setPaper("A4", "landscape");
 
 $html = file_get_contents("template.html");
 
-$html = str_replace(["{{ name }}", "{{ secondName }}", "{{ position }}", "{{ about }}", "{{ gitLink }}", "{{ email }}"], [$name, $secondName, $position, $about, $gitLink, $email], $html);
+$html = str_replace(["{{ name }}", "{{ position }}", "{{ about }}", "{{ gitLink }}", "{{ email }}"], [$name, $position, $about, $gitLink, $email], $html);
 
 $dompdf->loadHtml($html);
 
