@@ -12,14 +12,14 @@
         <h1>Ваше будущее резюме</h1>
 
         <form method="post" action="generate-pdf.php" id="form">
-            <label for="name">Имя</label>
-            <input type="text" name="name" id="name" maxlength = "30" required autocomplete="off">
+            <label for="name">Вас зовут (ФИО)</label>
+            <input type="text" name="name" id="name" maxlength = "50" required autocomplete="off">
 
-            <label for="position">Должность</label>
+            <label for="position">Желаемая должность</label>
             <input type="text" name="position" id="position" maxlength = "20" required>
 
             <label for="about">О себе</label>
-            <input type="text" name="about" id="about" maxlength = "50" required>
+            <textarea type="text" name="about" id="about" required></textarea>
 
             <label for="gitLink">Гитхаб</label>
             <input type="url" name="gitLink" id="gitLink" maxlength = "50" required>

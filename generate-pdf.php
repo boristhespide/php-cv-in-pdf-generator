@@ -30,6 +30,6 @@ $dompdf->loadHtml($html);
 
 $dompdf->render();
 
-$dompdf->addInfo("cv", "резюме для програмиста");
+$dompdf->addInfo("Резюме", "резюме для програмиста");
 
-$dompdf->stream('cv.pdf', ["Attachment" => 0]);
+$dompdf->stream('Резюме.pdf', ["Attachment" => 0]);
