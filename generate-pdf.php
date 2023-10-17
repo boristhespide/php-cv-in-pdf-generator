@@ -27,9 +27,6 @@ $html = str_replace(["{{ name }}", "{{ position }}", "{{ about }}", "{{ gitLink 
 
 $dompdf->loadHtml($html);
 
-
 $dompdf->render();
-
-$dompdf->addInfo("Резюме", "резюме для програмиста");
 
 $dompdf->stream('Резюме.pdf', ["Attachment" => 0]);
